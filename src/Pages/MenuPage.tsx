@@ -1,0 +1,30 @@
+import { SectionHeading } from '../Components/SectionHeading';
+import { EmptyMenuState } from '../Components/EmptyMenuState';
+import { FoodCard } from '../Components/FoodCard';
+import type { FoodItem } from '../Interfaces/food-item';
+
+interface MenuPageProps {
+  items: FoodItem[];
+}
+
+export function MenuPage({ items }: MenuPageProps) {
+  return (
+    <section id="menu" className="space-y-8 scroll-mt-24">
+      <SectionHeading
+        eyebrow="Menu"
+        title="Yemekler kart yapisinda aninda gosterilir"
+        description="Admin panelinde yapilan ekleme, guncelleme ve silme islemleri localStorage uzerinden saklanir ve bu alana dogrudan yansir."
+      />
+
+      {items.length === 0 ? (
+        <EmptyMenuState />
+      ) : (
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((item) => (
+            <FoodCard key={item.id} item={item} />
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
