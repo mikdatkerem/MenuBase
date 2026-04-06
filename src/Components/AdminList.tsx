@@ -19,11 +19,11 @@ export function AdminList({
         <div>
           <h3 className="font-serif text-2xl text-stone-900">Yemek Listesi</h3>
           <p className="mt-1 text-sm text-stone-500">
-            Listeleme, guncelleme ve silme islemleri bu panelden yapilir.
+            Listeleme, güncelleme ve silme işlemleri bu panelden yapılır.
           </p>
         </div>
         <span className="rounded-full bg-stone-100 px-4 py-2 text-sm font-semibold text-stone-700">
-          {items.length} kayit
+          {items.length} kayıt
         </span>
       </div>
 
@@ -32,7 +32,7 @@ export function AdminList({
           <span>Yemek</span>
           <span>Kategori</span>
           <span>Fiyat</span>
-          <span>Islem</span>
+          <span>İşlem</span>
         </div>
 
         <div className="divide-y divide-stone-200">
@@ -57,7 +57,7 @@ export function AdminList({
                   type="button"
                   onClick={() => onEdit(item)}
                 >
-                  Guncelle
+                  Güncelle
                 </button>
                 <button
                   className="rounded-full border border-red-200 px-4 py-2 text-sm font-medium text-red-700 transition hover:border-red-500 hover:text-red-800"
@@ -71,7 +71,7 @@ export function AdminList({
           ))}
           {items.length === 0 ? (
             <div className="px-5 py-10 text-center text-sm text-stone-500">
-              Henuz menuye eklenmis bir yemek yok.
+              Henüz menüye eklenmiş bir yemek yok.
             </div>
           ) : null}
         </div>

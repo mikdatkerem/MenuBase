@@ -6,24 +6,24 @@ interface AdminSummaryProps {
 export function AdminSummary({ itemCount, editing }: AdminSummaryProps) {
   const cards = [
     {
-      title: 'Ekle islemi',
+      title: 'Ekle işlemi',
       value: 'Aktif',
-      description: 'Form uzerinden yeni yemek olusturulur.',
+      description: 'Form üzerinden yeni yemek oluşturulur.',
     },
     {
-      title: 'Listeleme islemi',
-      value: `${itemCount} kayit`,
-      description: 'Kayitlar aninda panel ve menu alanina yansir.',
+      title: 'Listeleme işlemi',
+      value: `${itemCount} kayıt`,
+      description: 'Kayıtlar anında panel ve menü alanına yansır.',
     },
     {
-      title: 'Guncelleme islemi',
-      value: editing ? 'Secili kayit' : 'Beklemede',
-      description: 'Var olan yemek bilgileri tekrar duzenlenebilir.',
+      title: 'Güncelleme işlemi',
+      value: editing ? 'Seçili kayıt' : 'Beklemede',
+      description: 'Var olan yemek bilgileri tekrar düzenlenebilir.',
     },
     {
-      title: 'Silme islemi',
-      value: 'Hazir',
-      description: 'Tek tik ile kayit listeden kaldirilir.',
+      title: 'Silme işlemi',
+      value: 'Hazır',
+      description: 'Tek tık ile kayıt listeden kaldırılır.',
     },
   ];
 

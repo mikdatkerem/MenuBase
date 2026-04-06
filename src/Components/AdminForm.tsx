@@ -21,10 +21,10 @@ export function AdminForm({
       <div className="flex items-center justify-between gap-4">
         <div>
           <h3 className="font-serif text-2xl text-stone-900">
-            {editingId ? 'Yemek Guncelle' : 'Yeni Yemek Ekle'}
+            {editingId ? 'Yemek Güncelle' : 'Yeni Yemek Ekle'}
           </h3>
           <p className="mt-1 text-sm text-stone-500">
-            Admin bu form uzerinden menu icerigini dogrudan yonetir.
+            Admin bu form üzerinden menü içeriğini doğrudan yönetir.
           </p>
         </div>
         {editingId ? (
@@ -33,14 +33,14 @@ export function AdminForm({
             type="button"
             onClick={onCancelEdit}
           >
-            Vazgec
+            Vazgeç
           </button>
         ) : null}
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <label className="space-y-2 text-sm text-stone-700">
-          <span>Yemek Adi</span>
+          <span>Yemek Adı</span>
           <input
             required
             className="w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 outline-none transition focus:border-stone-900"
@@ -62,7 +62,7 @@ export function AdminForm({
         </label>
 
         <label className="space-y-2 text-sm text-stone-700 md:col-span-2">
-          <span>Aciklama</span>
+          <span>Açıklama</span>
           <textarea
             required
             className="min-h-32 w-full rounded-2xl border border-stone-300 bg-stone-50 px-4 py-3 outline-none transition focus:border-stone-900"
@@ -91,7 +91,7 @@ export function AdminForm({
         className="rounded-full bg-stone-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-stone-700"
         type="submit"
       >
-        {editingId ? 'Guncellemeyi Kaydet' : 'Yemegi Ekle'}
+        {editingId ? 'Güncellemeyi Kaydet' : 'Yemeği Ekle'}
       </button>
     </form>
   );
