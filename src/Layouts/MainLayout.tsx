@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 import { Navigation } from '../Components/Navigation';
 
 export function MainLayout({ children }: PropsWithChildren) {

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import { seedMenu } from './Data/seedMenu';
 import { useLocalStorage } from './Hooks/useLocalStorage';
 import type { FoodItem, FoodItemInput } from './Interfaces/food-item';
@@ -19,9 +20,7 @@ function App() {
   const [form, setForm] = useState<FoodItemInput>(initialForm);
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
   };
@@ -31,7 +30,7 @@ function App() {
     setEditingId(null);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const normalizedItem = {
