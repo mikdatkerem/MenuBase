@@ -12,8 +12,8 @@ export function MenuPage({ items }: MenuPageProps) {
     <section id="menu" className="space-y-8 scroll-mt-24">
       <SectionHeading
         eyebrow="Menu"
-        title="Yemekler kart yapisinda aninda gosterilir"
-        description="Admin panelinde yapilan ekleme, guncelleme ve silme islemleri localStorage uzerinden saklanir ve bu alana dogrudan yansir."
+        title=""
+        description=""
       />
 
       {items.length === 0 ? (

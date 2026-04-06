@@ -16,7 +16,9 @@ export function SectionHeading({
       </p>
       <div className="space-y-2">
         <h2 className="font-serif text-3xl text-stone-950 sm:text-4xl">{title}</h2>
-        <p className="text-sm leading-7 text-stone-600 sm:text-base">{description}</p>
+        {description ? (
+          <p className="text-sm leading-7 text-stone-600 sm:text-base">{description}</p>
+        ) : null}
       </div>
     </div>
   );

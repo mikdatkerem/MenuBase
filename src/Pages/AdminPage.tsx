@@ -30,8 +30,8 @@ export function AdminPage({
     <section id="admin" className="space-y-8 scroll-mt-24">
       <SectionHeading
         eyebrow="Admin"
-        title="Admin paneli yemekleri ekler, listeler, gunceller ve siler"
-        description="Tum hareketler tarayici uzerindeki localStorage icinde tutulur. Boyce sayfa yenilense bile menu verisi korunur."
+        title=""
+        description=""
       />
 
       <AdminSummary itemCount={items.length} editing={Boolean(editingId)} />

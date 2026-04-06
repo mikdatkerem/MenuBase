@@ -21,7 +21,7 @@ export function Navigation() {
             </li>
             <li>
               <a
-                className="rounded-full border border-stone-900 bg-stone-900 px-4 py-2 text-white transition hover:bg-stone-700"
+                className="rounded-full border border-amber-900 bg-amber-900 px-4 py-2 text-[#f5f5f4] transition hover:bg-amber-800 hover:text-[#f5f5f4]"
                 href="#admin"
               >
                 Admin
