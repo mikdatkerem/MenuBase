@@ -29,7 +29,6 @@ export function useLocalStorage<T>(
     try {
       window.localStorage.setItem(key, JSON.stringify(storedValue));
     } catch {
-      // Local storage is optional persistence for this project.
     }
   }, [isHydrated, key, storedValue]);
 

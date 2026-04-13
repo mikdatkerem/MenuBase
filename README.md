@@ -2,6 +2,9 @@
 
 `MenuBaseNextjs`, restoran menusu ve admin yonetimi senaryosu icin gelistirilmis bir `Next.js` uygulamasidir.
 
+Canli uygulama:
+- `https://menu-base.vercel.app/`
+
 Uygulama ozellikleri:
 - Menu kartlarini kullaniciya gosterir.
 - Admin panelinden yemek ekleme, listeleme, guncelleme ve silme islemlerini yapar.
