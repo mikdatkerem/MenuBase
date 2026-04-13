@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MenuBaseNextjs
 
-## Getting Started
+`MenuBaseNextjs`, restoran menusu ve admin yonetimi senaryosu icin gelistirilmis bir `Next.js` uygulamasidir.
 
-First, run the development server:
+Uygulama ozellikleri:
+- Menu kartlarini kullaniciya gosterir.
+- Admin panelinden yemek ekleme, listeleme, guncelleme ve silme islemlerini yapar.
+- Verileri tarayici tarafinda `localStorage` uzerinde saklar.
+- `Tailwind CSS` ile sade ve klasik bir arayuz sunar.
+
+## Teknolojiler
+
+- `Next.js` App Router
+- `React`
+- `TypeScript`
+- `Tailwind CSS`
+
+## Proje Yapisi
+
+```text
+src/
+  app/
+  Components/
+  Data/
+  Features/Pages/
+  Hooks/
+  Interfaces/
+  Layouts/
+  Utils/
+```
+
+Not:
+`Pages` yapisi, Next.js'in `src/pages` route sistemiyle cakismamasi icin `src/Features/Pages` altinda tutulmustur.
+
+## Kurulum
+
+```bash
+npm install
+```
+
+## Gelistirme Ortami
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayicida ac:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Uretim Build
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Uretim modunda calistirmak icin:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## localStorage Davranisi
 
-## Deploy on Vercel
+Uygulama yemek verilerini su anahtar ile saklar:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+menubase-menu-items
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Eger seed veride degisiklik yapip tarayicida eski kayitlari gormeye devam edersen, ilgili `localStorage` kaydini temizlemelisin.
+
+Tarayici konsolunda:
+
+```js
+localStorage.removeItem('menubase-menu-items');
+location.reload();
+```
+
+## Build Durumu
+
+Bu proje yerelde `npm run build` ile dogrulanmistir.
