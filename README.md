@@ -79,6 +79,3 @@ localStorage.removeItem('menubase-menu-items');
 location.reload();
 ```
 
-## Build Durumu
-
-Bu proje yerelde `npm run build` ile dogrulanmistir.
